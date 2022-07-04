@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.help-btn{
+  width: 90px;
+  height: 40px;
+  border-radius:8px;
+  color: #000;
+  font-size: 16px;
+  border-color: rgb(255, 254, 254);
+  border-width: 1px;
+  font-weight: bold;
+  background-color:#00c3ff;
+  float : right;
+
+}
