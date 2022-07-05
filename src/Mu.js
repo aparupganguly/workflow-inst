@@ -72,11 +72,9 @@ export default function CustomizedDialogs() {
           onClose={handleClose}>
           Modal title
         </BootstrapDialogTitle>
-        <DialogContent dividers>
+        <DialogContent dividers className="customized-dialog-content">
           <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
+          
           </Typography>
           <Typography gutterBottom>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur et.

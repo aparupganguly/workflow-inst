@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.customized-dialog-content{
+  width: 50%;
+  height: 700px;
+}
+
+.paper{
+  width: 100%;
+}
