@@ -10,6 +10,7 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
+import CustomizedDialogs from "./Mu";
 import pngone from "./workflow/pic1.png";
 import pngtwo from "./workflow/pic2.png";
 import pngthree from "./workflow/pic3.png";
@@ -22,28 +23,27 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     label: "help1",
-    imgPath:
-    pngone
+    imgPath: pngone,
   },
   {
-    label:"help2",
-    imgPath:pngtwo
+    label: "help2",
+    imgPath: pngtwo,
   },
   {
     label: "help3",
-    imgPath:pngthree
+    imgPath: pngthree,
   },
   {
     label: "help4",
-    imgPath:pngfour
+    imgPath: pngfour,
   },
   {
     label: "help5",
-    imgPath:pngfive
+    imgPath: pngfive,
   },
   {
     label: "help6",
-    imgPath:pngsix
+    imgPath: pngsix,
   },
 ];
 
@@ -66,7 +66,8 @@ function SwipeableTextMobileStepper() {
 
   return (
     <Box sx={{ maxWidth: 800, flexGrow: 1 }}>
-      <Paper className ="paper"
+      <Paper
+        className="paper"
         square
         elevation={0}
         sx={{

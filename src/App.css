@@ -44,3 +44,10 @@
 .paper{
   width: 100%;
 }
+.customized-dialog-content{
+  width: 80%;
+  text-align: center;
+  display: inline;
+  margin:0 auto;
+
+}

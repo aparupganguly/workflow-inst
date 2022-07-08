@@ -38,20 +38,7 @@ const Instruction=()=>{
                     className='icon-image'
                     onClick={prevImage}
                 />}
-                <img src={
-                    count==0?Img1:
-                    count==1?Img2:
-                    count==2?Img3:
-                    count==3?Img4:
-                    count==4?Img5:
-                    Img6
-                }
-                    className='tutorial-pic'
-                />
-                {count==5?null:<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBp97INBNTwV3pYS4YY8J47A42CdNMph6Ww&usqp=CAU'
-                    className='icon-image'
-                    onClick={nextImage}
-                />}
+               
             </div>
         </>
     )

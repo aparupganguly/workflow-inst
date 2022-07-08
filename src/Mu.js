@@ -9,7 +9,8 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import './App.css';
+import "./App.css";
+import SwipeableTextMobileStepper from "./Ste";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -60,7 +61,8 @@ export default function CustomizedDialogs() {
 
   return (
     <div>
-      <Button className ="help-btn" onClick={handleClickOpen}>
+      
+      <Button className="help-btn" onClick={handleClickOpen}>
         Help
       </Button>
       <BootstrapDialog
@@ -70,26 +72,14 @@ export default function CustomizedDialogs() {
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}>
-          Modal title
+          WorkFLow Tutorial
         </BootstrapDialogTitle>
         <DialogContent dividers className="customized-dialog-content">
-          <Typography gutterBottom>
-          
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+          <SwipeableTextMobileStepper />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
-            Save changes
+          Got It
           </Button>
         </DialogActions>
       </BootstrapDialog>
