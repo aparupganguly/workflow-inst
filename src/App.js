@@ -6,21 +6,9 @@ import CustomizedDialogs from "./Mu"
 function App() {
   return (
     <div className="App">
-      
-     <Instruction/>
+
+      <Instruction />
       <h1>Page content Goes Here!</h1>
-      <p>
-
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-      lorem ipsum dolor sit amet, consectetur adip
-
-      </p>
 
     </div>
   );

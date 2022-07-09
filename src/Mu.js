@@ -12,6 +12,22 @@ import Typography from "@mui/material/Typography";
 import "./App.css";
 import SwipeableTextMobileStepper from "./Ste";
 
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: "70%",
+  height: "80%",
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 6,
+};
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -50,25 +66,51 @@ BootstrapDialogTitle.propTypes = {
 };
 
 export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
-      
-      <Button className="help-btn" onClick={handleClickOpen}>
+
+      <Button className="help-btn" onClick={handleOpen}>
         Help
       </Button>
-      <BootstrapDialog
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography> */}
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <SwipeableTextMobileStepper />
+          </Typography>
+        </Box>
+      </Modal>
+
+      {/* <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
-        open={open}>
+        open={open}
+        sx={{
+          width: "1200px"
+        }
+
+        }
+      >
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}>
@@ -79,10 +121,11 @@ export default function CustomizedDialogs() {
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
-          Got It
+            Got It
           </Button>
         </DialogActions>
-      </BootstrapDialog>
+      </BootstrapDialog> */}
+
     </div>
   );
 }
